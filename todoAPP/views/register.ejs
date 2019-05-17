@@ -1,53 +1,121 @@
-<%- include('partials/header') %>
-<div class="container mt-5">
-  <h1>Register</h1>
+<%- include('partials/header_landr') %>
 
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body">
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" form action="/login" method="POST">
+					<span class="login100-form-title p-b-26">
+						Welcome to
+						todoAPP
+					</span>
+					<span class="login100-form-title p-b-48">
+						<img src="https://i.imgur.com/zbEPzfB.png">
+					</span>
 
-          <!-- Makes POST request to /register route -->
-          <form action="/register" method="POST">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-dark">Register</button>
-          </form>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
 
-        </div>
-      </div>
-    </div>
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
 
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign In with Google
-          </a>
-        </div>
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button">
-            <i class="fab fa-facebook"></i>
-            Sign In with Facebook
-          </a>
-        </div>
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-instagram" href="/auth/instagram" role="button">
-            <i class="fab fa-instagram"></i>
-            Sign In with Instagram
-          </a>
-        </div>
-      </div>
-    </div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
 
-  </div>
-</div>
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Don’t have an account?
+						</span>
+
+						<a class="txt2" href="#">
+							Sign Up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<!--<div class="box">-->
+<!--    <div class="container mt-5">-->
+<!--      <h1>Register</h1>-->
+    
+<!--      <div class="row">-->
+<!--        <div class="col-sm-8">-->
+<!--          <div class="card">-->
+<!--            <div class="card-body">-->
+    
+              <!-- Makes POST request to /register route -->
+<!--              <form action="/register" method="POST">-->
+<!--                <div class="form-group">-->
+<!--                  <label for="email">Email:</label>-->
+<!--                  <input type="email" class="form-control" name="username">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                  <label for="password">Password:</label>-->
+<!--                  <input type="password" class="form-control" name="password">-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-dark">Register</button>-->
+<!--              </form>-->
+    
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+    
+<!--        <div class="col-sm-4">-->
+<!--          <div class="card">-->
+<!--            <div class="card-body">-->
+<!--              <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">-->
+<!--                <i class="fab fa-google"></i>-->
+<!--                Sign In with Google-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--              <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button">-->
+<!--                <i class="fab fa-facebook"></i>-->
+<!--                Sign In with Facebook-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--              <a class="btn btn-block btn-social btn-instagram" href="/auth/instagram" role="button">-->
+<!--                <i class="fab fa-instagram"></i>-->
+<!--                Sign In with Instagram-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+    
+<!--      </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <%- include('partials/footer') %>

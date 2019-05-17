@@ -110,6 +110,11 @@ app.get("/", function(req, res) {
         });
     });
     
+
+app.get("/login", function(req, res) {
+    res.render("login");
+});
+
 app.get("/:customListName", function(req, res) {
   const customListName = _.capitalize(req.params.customListName);
   console.log(customListName);
@@ -129,6 +134,7 @@ app.get("/:customListName", function(req, res) {
     }
   });
 });
+
 
 app.post("/", function(req, res){
 
