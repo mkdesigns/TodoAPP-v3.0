@@ -1,0 +1,7 @@
+image:
+  file: Dockerfile
+ports:
+- port: 8080
+tasks:
+- init: node --version
+- command: node app.js
